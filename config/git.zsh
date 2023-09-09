@@ -17,7 +17,7 @@ alias glt='git tag -n --sort=taggerdate | tail -n ${1-10}'
 gat() { git tag -a $1 -m "$2" }
 gam() { git add --all && git commit -m "$*" }
 gitlog() {
-    git --no-pager log --date=format:'%Y-%m-%d %H:%M'  --pretty=tformat:$1 --graph -n ${2-10} \
+    git log --date=format:'%Y-%m-%d %H:%M' --oneline --graph --color=always | less -r \
 }
 gll() { gitlog "%C(${hashColor})%h %C(${contentColor})%s%Creset" $1 }
 glll() { gitlog "%C(${hashColor})%h %C(${dateColor})%cd %C(${authorColor})%cn: %C(${contentColor})%s%Creset" $1 }
