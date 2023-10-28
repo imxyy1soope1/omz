@@ -3,7 +3,6 @@ source $OMZ/config/omz.zsh
 source $OMZ/config/git.zsh
 source $OMZ/config/fzf.zsh
 source $OMZ/config/hook.zsh
-# source $OMZ/themes/simple.zsh-theme
 source $OMZ/themes/gentoo.zsh-theme
 
 # configuration
