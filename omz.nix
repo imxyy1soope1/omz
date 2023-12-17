@@ -21,7 +21,6 @@ stdenv.mkDerivation rec {
     cp -r * $outdir
     cd $outdir
 
-    rm LICENSE.txt
     rm -rf .git*
 
     runHook postInstall
