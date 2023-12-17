@@ -16,7 +16,7 @@
         final: prev: {
           version = "master";
           omz = final.callPackage ./omz.nix {
-            inherit (prev) lib stdenv bash;
+            inherit (prev) lib stdenv bash zsh;
           };
         };
     in

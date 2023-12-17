@@ -1,7 +1,7 @@
 # This script was inspired by the ArchLinux User Repository package:
 #
 #   https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=oh-my-zsh-git
-{ lib, stdenv, bash }:
+{ lib, stdenv, bash, zsh }:
 
 stdenv.mkDerivation rec {
   version = "master";
