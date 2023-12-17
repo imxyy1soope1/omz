@@ -1,7 +1,7 @@
 # FORK FROM OH MY ZSH
 
 ZSH_CACHE_DIR="$HOME/.cache/omz"
-mkdir -p ZSH_CACHE_DIR
+mkdir -p $ZSH_CACHE_DIR
 SHORT_HOST=${HOST/.*/}
 autoload -Uz add-zsh-hook
 zmodload -i zsh/complist
