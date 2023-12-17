@@ -1,6 +1,8 @@
 #!/bin/bash
 # 用于在<tab>行为发生时获取当前的光标位置
 
+export ZSH_CACHE_DIR=$HOME/.cache/omz
+
 exec < /dev/tty
 oldstty=$(stty -g)
 stty raw -echo min 0
@@ -10,4 +12,4 @@ stty $oldstty
 row=$((${pos[0]:2} - 1))
 col=$((${pos[1]} - 1))
 echo "export row=$row" > $ZSH_CACHE_DIR/cursor
-echo "export col=$col" >> $ZSH_CACHE_DIR/cache/cursor
+echo "export col=$col" >> $ZSH_CACHE_DIR/cursor
