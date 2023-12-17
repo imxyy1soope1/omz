@@ -23,7 +23,7 @@ function finalise {
 }
 
 function draw_preview {
-    source $OMZ/cache/cursor
+    source $ZSH_CACHE_DIR/cursor
     X=$(($COLUMNS / 2 + 2))
     Y=$((row + 2))
     if [ $Y -gt $((LINES - 11)) ]; then

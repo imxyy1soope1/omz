@@ -9,5 +9,5 @@ IFS=';' read -r -d R -a pos
 stty $oldstty
 row=$((${pos[0]:2} - 1))
 col=$((${pos[1]} - 1))
-echo "export row=$row" > $OMZ/cache/cursor
+echo "export row=$row" > $ZSH_CACHE_DIR/cursor
 echo "export col=$col" >> $OMZ/cache/cursor

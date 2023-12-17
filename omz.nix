@@ -10,7 +10,7 @@ stdenv.mkDerivation rec {
   src = ./.;
 
   strictDeps = true;
-  buildInputs = [ bash ];
+  buildInputs = [ bash lua ];
 
   installPhase = ''
     runHook preInstall
