@@ -17,7 +17,7 @@
           version = "master";
           omz = final.callPackage ./omz.nix {
             inherit (prev) lib stdenv bash;
-          }
+          };
         };
     in
     flake-utils.lib.eachDefaultSystem
