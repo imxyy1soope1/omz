@@ -14,10 +14,10 @@
     let
       overlay =
         final: prev: {
-          omz = prev.omz.overrideAttrs (oldAttrs: {
-            version = "master";
-            src = ./.;
-          });
+          version = "master";
+          omz = final.callPackage ./omz.nix {
+            inherit (prev) lib stdenv bash;
+          }
         };
     in
     flake-utils.lib.eachDefaultSystem
