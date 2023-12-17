@@ -10,4 +10,4 @@ stty $oldstty
 row=$((${pos[0]:2} - 1))
 col=$((${pos[1]} - 1))
 echo "export row=$row" > $ZSH_CACHE_DIR/cursor
-echo "export col=$col" >> $OMZ/cache/cursor
+echo "export col=$col" >> $ZSH_CACHE_DIR/cache/cursor
