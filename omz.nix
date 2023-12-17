@@ -22,6 +22,7 @@ stdenv.mkDerivation rec {
     cd $outdir
 
     rm -rf .git*
+    rm -rf screenshots
 
     runHook postInstall
   '';
