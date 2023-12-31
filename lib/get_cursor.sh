@@ -1,8 +1,6 @@
 #!/bin/bash
 # 用于在<tab>行为发生时获取当前的光标位置
 
-export ZSH_CACHE_DIR=$HOME/.cache/omz
-
 exec < /dev/tty
 oldstty=$(stty -g)
 stty raw -echo min 0

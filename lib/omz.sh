@@ -1,6 +1,7 @@
 # FORK FROM OH MY ZSH
 
-ZSH_CACHE_DIR="$HOME/.cache/omz"
+export ZSH_CACHE_DIR="$HOME/.cache/omz"
+export ZDOTDIR=${ZDOTDIR:-"$HOME/.config/zsh"}
 mkdir -p $ZSH_CACHE_DIR
 SHORT_HOST=${HOST/.*/}
 autoload -Uz add-zsh-hook
@@ -84,9 +85,9 @@ case ${HIST_STAMPS-} in
   *) alias history="omz_history -t '$HIST_STAMPS'" ;;
 esac
 
-HISTFILE="$HOME/.zsh_history"
-HISTSIZE=50000
-SAVEHIST=20000
+HISTFILE=${HISTFILE:-"$HOME/.zsh_history"}
+HISTSIZE=${HISTSIZE:-50000}
+SAVEHIST=${SAVEHIST:-20000}
 
 setopt extended_history
 setopt hist_expire_dups_first
