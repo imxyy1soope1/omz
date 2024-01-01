@@ -1,5 +1,6 @@
+FZF_HISTORY=${_FZF_HISTORY:-$HOME/.fzf_history}
 export RUNEWIDTH_EASTASIAN=0
-export FZF_DEFAULT_OPTS="--height 12 --scrollbar=▌▐ --info=inline-right --layout=reverse --history=$HOME/.fzf_history"
+export FZF_DEFAULT_OPTS="--height 12 --scrollbar=▌▐ --info=inline-right --layout=reverse --history=$FZF_HISTORY"
 export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build,dist,vendor} --type f"
 export FZF_PREVIEW_COMMAND='bash $OMZ/lib/file_preview.sh {}'
 
